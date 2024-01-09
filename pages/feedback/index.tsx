@@ -5,7 +5,7 @@ const Feedback = ({ feedbacks }: { feedbacks: any[] }) => {
   const [currentFeedback, setCurrentFeedback] = useState<any>(null);
 
   const loadFeedbackHandler = (id: string) => {
-    fetch(`/api/${id}`)
+    fetch(`/api/feedback/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setCurrentFeedback(data.feedback);
