@@ -8,11 +8,11 @@ type Data = {
   data?: any;
 };
 
-function getFilePath() {
+export function getFilePath() {
   return path.join(process.cwd(), 'data', 'feedback.json');
 }
 
-function getData(filePath: string) {
+export function getData(filePath: string) {
   const fileData = fs.readFileSync(filePath);
   return JSON.parse(fileData.toString());
 }
