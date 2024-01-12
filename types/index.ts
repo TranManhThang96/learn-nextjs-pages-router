@@ -1,0 +1,9 @@
+interface IPost {
+  id: string | number;
+  title: string;
+  image: string;
+  excerpt: string;
+  date: string;
+  slug: string;
+  content?: string;
+}
