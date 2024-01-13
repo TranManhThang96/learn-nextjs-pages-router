@@ -2,8 +2,9 @@ import React from 'react';
 import classes from './styles/post-item.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import { IPost } from '@/types';
 const PostItem = ({ post }: { post: IPost }) => {
-  const { id, title, image, excerpt, date, slug } = post;
+  const { title, image, excerpt, date, slug } = post;
   const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     day: 'numeric',
     month: 'numeric',
@@ -22,9 +23,9 @@ const PostItem = ({ post }: { post: IPost }) => {
           />
         </div>
         <div className={classes.content}>
-          <h3>TITLE</h3>
-          <time>July 13th 2022</time>
-          <p>The excerpt</p>
+          <h3>{post.title}</h3>
+          <time>{formattedDate}</time>
+          <p>{post.excerpt}</p>
         </div>
       </Link>
     </li>
