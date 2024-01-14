@@ -1,9 +1,18 @@
-import React from 'react'
+import ContactForm from '@/components/Contact/ContactForm';
+import Head from 'next/head';
+import React from 'react';
 
 const ContactPage = () => {
   return (
-    <div>ContactPage</div>
-  )
-}
+    <>
+      <Head>
+        <title>Contact me</title>
+        <meta name="description" content="Contact Blog" />
+      </Head>
+      <ContactForm />
+    </>
+  );
+};
 
-export default ContactPage
+export default ContactPage;
+` `;

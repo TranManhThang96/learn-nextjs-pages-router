@@ -1,10 +1,19 @@
 import PostContent from '@/components/PostDetail/PostContent';
 import { getPostDataBySlug, getPostFiles } from '@/libs/util';
 import { IPost } from '@/types';
+import Head from 'next/head';
 import React from 'react';
 
 const PostDetailPage = ({ post }: { post: IPost }) => {
-  return <PostContent post={post} />;
+  return (
+    <>
+      <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.excerpt} />
+      </Head>
+      <PostContent post={post} />;
+    </>
+  );
 };
 
 export default PostDetailPage;

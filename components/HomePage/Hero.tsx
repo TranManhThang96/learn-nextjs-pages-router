@@ -8,7 +8,7 @@ const Hero = () => {
       <div className={classes.image}>
         <Image src="/images/blog.jpg" alt="hero" width={300} height={300} />
       </div>
-      <h1>Hi, I'm Thang</h1>
+      <h1>{`Hi, I'm Thang`}</h1>
       <p>
         I blog about web development - frontend frameworks like Vue or React
       </p>

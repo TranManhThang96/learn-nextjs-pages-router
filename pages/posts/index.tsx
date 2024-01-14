@@ -1,5 +1,6 @@
 import AllPosts from '@/components/Posts/AllPosts';
 import { IPost } from '@/types';
+import Head from 'next/head';
 import React from 'react';
 
 const DUMMY_POSTS: IPost[] = [
@@ -30,7 +31,15 @@ const DUMMY_POSTS: IPost[] = [
 ];
 
 const AllPostsPage = () => {
-  return <AllPosts posts={DUMMY_POSTS} />;
+  return (
+    <>
+      <Head>
+        <title>Posts Page</title>
+        <meta name="description" content="All Posts" />
+      </Head>
+      <AllPosts posts={DUMMY_POSTS} />
+    </>
+  );
 };
 
 export default AllPostsPage;
